@@ -418,7 +418,7 @@
         }
     }
 
-    <!-- displaying the quiz -->
+    // <!-- displaying the quiz -->
     function myFunction()
     {
         var y = document.getElementById("game-main");
@@ -431,7 +431,7 @@
         }
     }
 
-    <!-- confirming to start the timer -->
+    // <!-- confirming to start the timer -->
     function myTimeConfirm()
     {
         var z = confirm("Do you want to start the timer?");
@@ -444,7 +444,7 @@
         }
     }
 
-    <!-- calculating time -->
+    // <!-- calculating time -->
     var countdownNumberEl = document.getElementById('countdown-number');
     var countdown = 0;
     setInterval(setMyTime, 1000);
@@ -460,7 +460,7 @@
         }
     }
 
-    <!-- checking answers -->
+    // <!-- checking answers -->
     var total = 10;
     var score = 0;
     var formElement = document.forms["quizForm"];
@@ -482,7 +482,7 @@
 
         for (i=1; i <= total; i++)
         {
-            <!-- validation for no-user input -->
+            // <!-- validation for no-user input -->
             if(eval("q"+i) === null || eval("q"+i) === "")
             {
                 alert("You missed question" + i);
@@ -497,7 +497,7 @@
             displayAns()
         }
 
-        <!-- answers list and incrementing correct and wrong answers -->
+        // <!-- answers list and incrementing correct and wrong answers -->
         var answersList = ["b","d","a","b","c","a","b","d","b","d"];
         var correctAnswers = 0;
         var wrongAnswers = 0;
@@ -515,7 +515,7 @@
         }
 
 
-        <!-- changing background colour -->
+        // <!-- changing background colour -->
         if (document.getElementById("colorz").value === "Submit Answers") {
             if (score < 10) {
                 document.getElementById("container").style.backgroundColor = "red";
@@ -531,14 +531,14 @@
             }
         }
 
-        <!-- displaying results -->
+        // <!-- displaying results -->
         document.getElementById("myVideo").style.display = "none";
         var results = document.getElementById("results");
         results.innerHTML = "<div id = 'question'>You scored " + score +" out of 20<br>You answered : <br>" + correctAnswers +" questions correctly<br> " + wrongAnswers +" question incorrectly<br>Time taken : "+countdown+" seconds</div>";
         return false;
     }
 
-    <!-- displaying answers -->
+    // <!-- displaying answers -->
     function displayAns()
     {
         var x = document.getElementById("correctAnswers")
